@@ -4,30 +4,12 @@ import Tabs from '@/components/Tabs'
 import React from 'react'
 import { useRouter } from 'next/router'
 
-const WalineComponent = dynamic(
-  () => {
-    return import('@/components/WalineComponent')
-  },
-  { ssr: false }
-)
-
-const CusdisComponent = dynamic(
-  () => {
-    return import('@/components/CusdisComponent')
-  },
-  { ssr: false }
-)
-
 const GiscusComponent = dynamic(
   () => {
     return import('@/components/Giscus')
   },
   { ssr: false }
 )
-
-const ValineComponent = dynamic(() => import('@/components/ValineComponent'), {
-  ssr: false
-})
 
 const Comment = ({ frontMatter }) => {
   const router = useRouter()
