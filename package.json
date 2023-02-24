@@ -1,16 +1,16 @@
 {
-  "name": "notion-next",
+  "name": "NotionBlog",
   "version": "3.11.0",
-  "homepage": "https://github.com/tangly1024/NotionNext.git",
+  "homepage": "https://github.com/Jeffreyhung/NotionBlog.git",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tangly1024/NotionNext.git"
+    "url": "https://github.com/Jeffreyhung/NotionBlog.git"
   },
   "author": {
-    "name": "tangly",
-    "email": "mail@tangly1024.com",
-    "url": "http://tangly1024.com"
+    "name": "jeffreyhung",
+    "email": "contact@jeffreyhung.com",
+    "url": "https://jeffreyhung.com"
   },
   "scripts": {
     "dev": "next dev",
@@ -71,9 +71,5 @@
   },
   "resolutions": {
     "axios": ">=0.21.1"
-  },
-  "bugs": {
-    "url": "https://github.com/tangly/NotionNext/issues",
-    "email": "tlyong1992@hotmail.com"
   }
 }
