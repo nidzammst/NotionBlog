@@ -146,14 +146,6 @@ nav {
   pointer-events: none;
 }
 
-.fireworks {
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 1000;
-  pointer-events: none;
-}
-
 [data-waline] p {
   color: var(--waline-color);
   @apply dark:text-gray-200 !important;
@@ -197,14 +189,6 @@ nav {
 	-webkit-box-orient: vertical;
 	word-wrap: break-word;
 	word-break: break-all;
-}
-
-.nobelium{
-    @apply flex flex-col justify-between
-}
-
-.nobelium .notion-code{
-    @apply max-w-2xl;
 }
 
 .next #announcement-content *{

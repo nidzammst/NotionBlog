@@ -7,18 +7,11 @@ import SideRight from './components/SideRight'
 import TopNav from './components/TopNav'
 import smoothscroll from 'smoothscroll-polyfill'
 import FloatDarkModeButton from './components/FloatDarkModeButton'
-import Live2D from '@/components/Live2D'
 import LoadingCover from './components/LoadingCover'
 import { useGlobal } from '@/lib/global'
 import BLOG from '@/blog.config'
 import dynamic from 'next/dynamic'
 
-const FacebookPage = dynamic(
-  () => {
-    return import('@/components/FacebookPage')
-  },
-  { ssr: false }
-)
 
 /**
  * 基础布局 采用左右两侧布局，移动端使用顶部导航栏
@@ -32,8 +25,6 @@ const LayoutBase = props => {
   // const [percent, changePercent] = useState(0) // 页面阅读百分比
   const rightAreaSlot = (
     <>
-      <FacebookPage />
-      <Live2D />
     </>
   )
   const { onLoading } = useGlobal()

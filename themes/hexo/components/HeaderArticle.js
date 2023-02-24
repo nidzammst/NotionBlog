@@ -57,10 +57,6 @@ export default function HeaderArticle({ post, siteInfo }) {
                 {locale.COMMON.LAST_EDITED_TIME}: {post.lastEditedTime}
               </div>
             </div>
-            {BLOG.ANALYTICS_BUSUANZI_ENABLE && <div className="busuanzi_container_page_pv font-light mr-2">
-              <span className="mr-2 busuanzi_value_page_pv" />
-              {locale.COMMON.VIEWS}
-            </div>}
           </section>
         </div>
       </header>
