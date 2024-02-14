@@ -1,14 +1,14 @@
 {
-  "name": "MST Blog",
+  "name": "MstBlog",
   "version": "3.11.0",
-  "homepage": "https://github.com/nidzammst/mstblog",
+  "homepage": "https://github.com/nidzammst/mstblog.git",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nidzammst/mstblog"
+    "url": "https://github.com/nidzammst/mstblog.git"
   },
   "author": {
-    "name": "Ahmad Nidzam Musthafa",
+    "name": "mstblog",
     "email": "nidzam0501@gmail.com",
     "url": "https://instagram.com/nidzammst"
   },
