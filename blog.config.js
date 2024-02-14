@@ -9,7 +9,7 @@ const BLOG = {
   SINCE: 2024,
   APPEARANCE: 'light', // ['light', 'dark', 'auto'], // light 日间模式 ， dark夜间模式， auto根据时间和主题自动夜间模式
 
-  AUTHOR: 'Musthafa Family', 
+  AUTHOR: 'mstblog', 
   BIO: '', 
   LINK: 'https://mstblog.vercel.app/', 
   KEYWORDS: 'Musthafa Family Blog', 
