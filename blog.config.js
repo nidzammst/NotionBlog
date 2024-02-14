@@ -6,15 +6,15 @@ const BLOG = {
   THEME: 'hexo', 
   THEME_SWITCH: process.env.NEXT_PUBLIC_THEME_SWITCH || false, // 是否显示切换主题按钮
   LANG: 'en-US', // see /lib/lang.js for more.
-  SINCE: 2022,
+  SINCE: 2024,
   APPEARANCE: 'light', // ['light', 'dark', 'auto'], // light 日间模式 ， dark夜间模式， auto根据时间和主题自动夜间模式
 
-  AUTHOR: 'Jeffrey Hung', 
+  AUTHOR: 'Musthafa Family', 
   BIO: '', 
-  LINK: 'https://blog.jeffreyhung.com', 
-  KEYWORDS: 'Notion, blog', 
-  CONTACT_EMAIL: 'contact@jeffreyhung[.]com',
-  CONTACT_GITHUB: 'https://github.com/jeffreyhung',
+  LINK: 'https://mstblog.vercel.app/', 
+  KEYWORDS: 'Musthafa Family Blog', 
+  CONTACT_EMAIL: 'nidzam0501@gmail.com',
+  CONTACT_GITHUB: 'https://github.com/nidzammst',
 
   // 网站字体
   FONT_STYLE: 'font-sans', // ['font-serif','font-sans'] 两种可选，分别是衬线和无衬线: 参考 https://www.jianshu.com/p/55e410bd2115
@@ -93,9 +93,9 @@ const BLOG = {
 
   // 作废配置
   AVATAR: '/avatar.png', // 作者头像，被notion中的ICON覆盖。若无ICON则取public目录下的avatar.png
-  TITLE: process.env.NEXT_PUBLIC_TITLE || 'NotionNext BLOG', // 站点标题 ，被notion中的页面标题覆盖
+  TITLE: process.env.NEXT_PUBLIC_TITLE || 'Mst Blog', // 站点标题 ，被notion中的页面标题覆盖
   HOME_BANNER_IMAGE: './bg_image.jpg', // 首页背景大图, 会被notion中的封面图覆盖，若无封面图则会使用代码中的 /public/bg_image.jpg 文件
-  DESCRIPTION: process.env.NEXT_PUBLIC_DESCRIPTION || '这是一个由NotionNext生成的站点', // 站点描述，被notion中的页面描述覆盖
+  DESCRIPTION: process.env.NEXT_PUBLIC_DESCRIPTION || 'MstBlog', // 站点描述，被notion中的页面描述覆盖
   // 开发相关
   NOTION_ACCESS_TOKEN: process.env.NOTION_ACCESS_TOKEN || '', // Useful if you prefer not to make your database public
   DEBUG: process.env.NEXT_PUBLIC_DEBUG || false, // 是否显示调试按钮

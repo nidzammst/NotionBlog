@@ -1,16 +1,16 @@
 {
-  "name": "NotionBlog",
+  "name": "MST Blog",
   "version": "3.11.0",
-  "homepage": "https://github.com/Jeffreyhung/NotionBlog.git",
+  "homepage": "https://github.com/nidzammst/mstblog",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Jeffreyhung/NotionBlog.git"
+    "url": "https://github.com/nidzammst/mstblog"
   },
   "author": {
-    "name": "jeffreyhung",
-    "email": "contact@jeffreyhung.com",
-    "url": "https://jeffreyhung.com"
+    "name": "Ahmad Nidzam Musthafa",
+    "email": "nidzam0501@gmail.com",
+    "url": "https://instagram.com/nidzammst"
   },
   "scripts": {
     "dev": "next dev",

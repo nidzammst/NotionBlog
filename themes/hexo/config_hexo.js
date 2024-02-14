@@ -1,6 +1,6 @@
 const CONFIG_HEXO = {
   HOME_BANNER_ENABLE: true,
-  HOME_BANNER_GREETINGS: ['Security Engineer','Podcaster'], // 首页大图标语文字
+  HOME_BANNER_GREETINGS: ['Writer','Teacher', 'Student'], // 首页大图标语文字
 
   HOME_NAV_BUTTONS: false, // 首页是否显示分类大图标按钮
 
