@@ -6,7 +6,7 @@ import '@/styles/globals.css'
 
 // core styles shared by all of react-notion-x (required)
 import 'react-notion-x/src/styles.css'
-import '@/styles/notion.css' //  重写部分样式
+import '@/styles/notion.css' //  Ganti beberapa gaya
 
 import { GlobalContextProvider } from '@/lib/global'
 import { DebugPanel } from '@/components/DebugPanel'
@@ -18,7 +18,7 @@ import AOS from 'aos'
 import 'aos/dist/aos.css' // You can also use <link> for styles
 
 const MyApp = ({ Component, pageProps }) => {
-  // 外部插件
+  // plugin eksternal
   const externalPlugins = <>
         {JSON.parse(BLOG.THEME_SWITCH) && <ThemeSwitch />}
         {JSON.parse(BLOG.DEBUG) && <DebugPanel />}

@@ -12,7 +12,7 @@ import { getPageTableOfContents } from '@/lib/notion/getPageTableOfContents'
 import md5 from 'js-md5'
 
 /**
- * 根据notion的slug访问页面
+ * Akses halaman sesuai dengan slug pemberitahuan
  * @param {*} props
  * @returns
  */
@@ -22,7 +22,7 @@ const Slug = props => {
   const { post, siteInfo } = props
   const router = Router.useRouter()
 
-  // 文章锁🔐
+  // Kunci artikel🔐
   const [lock, setLock] = React.useState(post?.password && post?.password !== '')
 
   React.useEffect(() => {
@@ -45,7 +45,7 @@ const Slug = props => {
         const article = document.getElementById('container')
         if (!article) {
           router.push('/404').then(() => {
-            console.warn('找不到页面', router.asPath)
+            console.warn('Page not found', router.asPath)
           })
         }
       }
@@ -55,7 +55,7 @@ const Slug = props => {
   }
 
   /**
-   * 验证文章密码
+   * Verifikasi kata sandi artikel
    * @param {*} result
    */
   const validPassword = passInput => {
@@ -153,7 +153,7 @@ export async function getStaticProps({ params: { slug } }) {
 }
 
 /**
- * 获取文章的关联推荐文章列表，目前根据标签关联性筛选
+ * Dapatkan daftar artikel yang direkomendasikan terkait dengan artikel tersebut, yang saat ini difilter berdasarkan relevansi tag
  * @param post
  * @param {*} allPosts
  * @param {*} count

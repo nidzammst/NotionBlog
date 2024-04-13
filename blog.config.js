@@ -1,88 +1,88 @@
-// 注: process.env.XX是Vercel的环境变量，配置方式见：https://docs.tangly1024.com/zh/features/personality
+// Catatan: process.env.XX adalah variabel lingkungan Vercel. Untuk metode konfigurasi, lihat: https://docs.tangly1024.com/zh/features/personality.
 const BLOG = {
   NOTION_PAGE_ID: process.env.NOTION_PAGE_ID,
-  PSEUDO_STATIC: false, // 伪静态路径，开启后所有文章URL都以 .html 结尾。
-  NEXT_REVALIDATE_SECOND: process.env.NEXT_PUBLIC_REVALIDATE_SECOND || 5, // 更新内容缓存间隔 单位(秒)；即每个页面有5秒的纯静态期、此期间无论多少次访问都不会抓取notion数据；调大该值有助于节省Vercel资源、同时提升访问速率，但也会使文章更新有延迟。
-  THEME: 'hexo', 
-  THEME_SWITCH: process.env.NEXT_PUBLIC_THEME_SWITCH || false, // 是否显示切换主题按钮
+  PSEUDO_STATIC: false, // Jalur pseudo-statis, setelah diaktifkan, semua URL artikel akan diakhiri dengan .html.
+  NEXT_REVALIDATE_SECOND: process.env.NEXT_PUBLIC_REVALIDATE_SECOND || 5, // Perbarui unit interval cache konten (detik); yaitu, setiap halaman memiliki periode statis murni selama 5 detik, selama periode tersebut tidak ada data notifikasi yang akan diambil tidak peduli berapa kali halaman tersebut diakses; meningkatkan nilai ini akan membantu menghemat sumber daya Vercel dan meningkatkan kecepatan aksesnya, namun juga akan menyebabkan keterlambatan update artikel.
+  THEME: 'hexo',
+  THEME_SWITCH: process.env.NEXT_PUBLIC_THEME_SWITCH || false, // Apakah akan menampilkan tombol ganti tema
   LANG: 'en-US', // see /lib/lang.js for more.
   SINCE: 2024,
-  APPEARANCE: 'light', // ['light', 'dark', 'auto'], // light 日间模式 ， dark夜间模式， auto根据时间和主题自动夜间模式
+  APPEARANCE: 'auto', // ['light', 'dark', 'auto'], // light Mode siang, mode malam gelap, mode malam otomatis otomatis berdasarkan waktu dan tema
 
-  AUTHOR: 'mstblog', 
-  BIO: '', 
-  LINK: 'https://mstblog.vercel.app/', 
-  KEYWORDS: 'Musthafa Family Blog', 
+  AUTHOR: 'mstblog',
+  BIO: '',
+  LINK: 'https://mstblog.vercel.app/',
+  KEYWORDS: 'Musthafa Family Blog',
   CONTACT_EMAIL: 'nidzam0501@gmail.com',
   CONTACT_GITHUB: 'https://github.com/nidzammst',
 
-  // 网站字体
-  FONT_STYLE: 'font-sans', // ['font-serif','font-sans'] 两种可选，分别是衬线和无衬线: 参考 https://www.jianshu.com/p/55e410bd2115
-  FONT_URL: [// 字体CSS 例如 https://npm.elemecdn.com/lxgw-wenkai-webfont@1.6.0/style.css
+  // font situs web
+  FONT_STYLE: 'font-serif', // ['font-serif','font-sans'] Dua pilihannya adalah serif dan sans serif, Referensi: https://www.jianshu.com/p/55e410bd2115
+  FONT_URL: [// Contoh font CSS https://npm.elemecdn.com/lxgw-wenkai-webfont@1.6.0/style.css
     'https://fonts.googleapis.com/css?family=Bitter&display=swap',
     'https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500&display=swap',
     'https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500&display=swap'
   ],
-  FONT_SANS: [// 无衬线字体 例如'LXGW WenKai'
+  FONT_SANS: [// Font sans serif mis.'LXGW WenKai'
     'Bitter', '"PingFang SC"', '-apple-system', 'BlinkMacSystemFont', '"Hiragino Sans GB"',
     '"Segoe UI Emoji"', '"Segoe UI Symbol"', '"Segoe UI"', '"Noto Sans SC"', 'HarmonyOS_Regular',
     '"Microsoft YaHei"', '"Helvetica Neue"', 'Helvetica', '"Source Han Sans SC"',
     'Arial', 'sans-serif', '"Apple Color Emoji"'],
-  FONT_SERIF: [// 衬线字体 例如'LXGW WenKai'
+  FONT_SERIF: [// Font serif seperti 'LXGW WenKai'
     'Bitter', '"Noto Serif SC"', 'SimSun', '"Times New Roman"', 'Times', 'serif',
     '"Segoe UI Emoji"', '"Segoe UI Symbol"', '"Apple Color Emoji"'],
-  FONT_AWESOME: '/css/all.min.css', // font-awesome 字体图标地址
+  FONT_AWESOME: '/css/all.min.css', // font-awesome Alamat ikon font
 
-  // 侧栏布局 是否反转(左变右,右变左) 已支持主题: hexo next medium fukasawa example
+  // Apakah tata letak sidebar dibalik (kiri ke kanan, kanan ke kiri) Tema didukung: hexo next medium fukasawa example
   LAYOUT_SIDEBAR_REVERSE: false,
 
-  // PrismJs 代码相关
+  // PrismJs Terkait kode
   PRISM_JS_AUTO_LOADER: 'https://npm.elemecdn.com/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js',
   PRISM_JS_PATH: 'https://npm.elemecdn.com/prismjs@1.29.0/components/',
-  PRISM_THEME_PATH: 'https://npm.elemecdn.com/prism-themes/themes/prism-a11y-dark.min.css', // 代码样式主题 更多参考 https://github.com/PrismJS/prism-themes
-  CODE_MAC_BAR: true, // 代码左上角显示mac的红黄绿图标
-  CODE_LINE_NUMBERS: process.env.NEXT_PUBLIC_CODE_LINE_NUMBERS || 'false', // 是否显示行号
+  PRISM_THEME_PATH: 'https://npm.elemecdn.com/prism-themes/themes/prism-a11y-dark.min.css', // Tema Gaya Kode Referensi Lebih Banyak https://github.com/PrismJS/prism-themes
+  CODE_MAC_BAR: true, // Ikon mac berwarna merah, kuning dan hijau ditampilkan di sudut kiri atas kode
+  CODE_LINE_NUMBERS: process.env.NEXT_PUBLIC_CODE_LINE_NUMBERS || 'false', // Apakah akan menampilkan nomor baris
 
-  BACKGROUND_LIGHT: '#eeeeee', // use hex value, don't forget '#' e.g #fffefc
-  BACKGROUND_DARK: '#000000', // use hex value, don't forget '#'
+  BACKGROUND_LIGHT: '#DDDDDD', // use hex value, don't forget '#' e.g #fffefc
+  BACKGROUND_DARK: '#222831', // use hex value, don't forget '#'
   SUB_PATH: '', // leave this empty unless you want to deploy in a folder
 
-  POST_URL_PREFIX: process.env.NEXT_PUBLIC_POST_URL_PREFIX || 'article', // POST类型文章的默认路径前缀，例如默认POST类型的路径是  /article/[slug]
-  // 如果此项配置为 '' 空， 则文章将没有前缀路径，使用场景： 希望文章前缀路径为 /post 的情况 支持多级
+  POST_URL_PREFIX: process.env.NEXT_PUBLIC_POST_URL_PREFIX || 'article', // Awalan jalur default untuk artikel tipe POST, misalnya jalur tipe POST default adalah /article/[slug]
+  // Jika item ini dikonfigurasi sebagai '' kosong, artikel tidak akan memiliki jalur awalan Skenario penggunaan: Jika Anda ingin jalur awalan artikel menjadi /post, dukungan multi-level didukung.
 
-  POST_LIST_STYLE: 'page', // ['page','scroll] 文章列表样式:页码分页、单页滚动加载
-  POST_LIST_PREVIEW: process.env.NEXT_PUBLIC_POST_PREVIEW || 'false', //  是否在列表加载文章预览
-  POST_PREVIEW_LINES: 12, // 预览博客行数
-  POST_RECOMMEND_COUNT: 6, // 推荐文章数量
-  POSTS_PER_PAGE: 12, // post counts per page
-  POSTS_SORT_BY: 'notion', // 排序方式 'date'按时间,'notion'由notion控制
+  POST_LIST_STYLE: 'scroll', // ['page','scroll] Gaya daftar artikel: paging nomor halaman, pemuatan gulir satu halaman
+  POST_LIST_PREVIEW: process.env.NEXT_PUBLIC_POST_PREVIEW || 'false', //  Apakah akan memuat pratinjau artikel dalam daftar
+  POST_PREVIEW_LINES: 12, // Pratinjau jumlah baris blog
+  POST_RECOMMEND_COUNT: 6, // Jumlah artikel yang direkomendasikan
+  POSTS_PER_PAGE: 8, // post counts per page
+  POSTS_SORT_BY: 'notion', // Sort by: 'date' waktu, 'notion' Tergantung control Notion
 
-  PREVIEW_CATEGORY_COUNT: 16, // 首页最多展示的分类数量，0为不限制
-  PREVIEW_TAG_COUNT: 16, // 首页最多展示的标签数量，0为不限制
+  PREVIEW_CATEGORY_COUNT: 0, // Jumlah maksimum kategori yang ditampilkan di beranda, 0 berarti tidak ada batasan
+  PREVIEW_TAG_COUNT: 0, // Jumlah maksimum tag yang ditampilkan di beranda, 0 berarti tidak ada batasan
 
   // giscus @see https://giscus.app/
-  COMMENT_GISCUS_REPO: process.env.NEXT_PUBLIC_COMMENT_GISCUS_REPO || '', // 你的Github仓库名 e.g 'tangly1024/NotionNext'
-  COMMENT_GISCUS_REPO_ID: process.env.NEXT_PUBLIC_COMMENT_GISCUS_REPO_ID || '', // 你的Github Repo ID e.g ( 設定完 giscus 即可看到 )
-  COMMENT_GISCUS_CATEGORY_ID: process.env.NEXT_PUBLIC_COMMENT_GISCUS_CATEGORY_ID || '', // 你的Github Discussions 內的 Category ID ( 設定完 giscus 即可看到 )
-  COMMENT_GISCUS_MAPPING: process.env.NEXT_PUBLIC_COMMENT_GISCUS_MAPPING || 'pathname', // 你的Github Discussions 使用哪種方式來標定文章, 預設 'pathname'
-  COMMENT_GISCUS_REACTIONS_ENABLED: process.env.NEXT_PUBLIC_COMMENT_GISCUS_REACTIONS_ENABLED || '1', // 你的 Giscus 是否開啟文章表情符號 '1' 開啟 "0" 關閉 預設開啟
-  COMMENT_GISCUS_EMIT_METADATA: process.env.NEXT_PUBLIC_COMMENT_GISCUS_EMIT_METADATA || '0', // 你的 Giscus 是否提取 Metadata '1' 開啟 '0' 關閉 預設關閉
-  COMMENT_GISCUS_INPUT_POSITION: process.env.NEXT_PUBLIC_COMMENT_GISCUS_INPUT_POSITION || 'bottom', // 你的 Giscus 發表留言位置 'bottom' 尾部 'top' 頂部, 預設 'bottom'
-  COMMENT_GISCUS_LANG: process.env.NEXT_PUBLIC_COMMENT_GISCUS_LANG || 'zh-CN', // 你的 Giscus 語言 e.g 'en', 'zh-TW', 'zh-CN', 預設 'en'
-  COMMENT_GISCUS_LOADING: process.env.NEXT_PUBLIC_COMMENT_GISCUS_LOADING || 'lazy', // 你的 Giscus 載入是否漸進式載入, 預設 'lazy'
-  COMMENT_GISCUS_CROSSORIGIN: process.env.NEXT_PUBLIC_COMMENT_GISCUS_CROSSORIGIN || 'anonymous', // 你的 Giscus 可以跨網域, 預設 'anonymous'
+  COMMENT_GISCUS_REPO: process.env.NEXT_PUBLIC_COMMENT_GISCUS_REPO || '', // Nama repositori github Anda e.g 'tangly1024/NotionNext'
+  COMMENT_GISCUS_REPO_ID: process.env.NEXT_PUBLIC_COMMENT_GISCUS_REPO_ID || '', // github Anda Repo ID e.g ( dapat dilihat giscus dapat dilihat )
+  COMMENT_GISCUS_CATEGORY_ID: process.env.NEXT_PUBLIC_COMMENT_GISCUS_CATEGORY_ID || '', // github Anda Discussions di dalam Category ID ( dapat dilihat giscus dapat dilihat )
+  COMMENT_GISCUS_MAPPING: process.env.NEXT_PUBLIC_COMMENT_GISCUS_MAPPING || 'pathname', // github Anda Discussions Metode mana yang digunakan untuk mengkalibrasi artikel, default 'pathname'
+  COMMENT_GISCUS_REACTIONS_ENABLED: process.env.NEXT_PUBLIC_COMMENT_GISCUS_REACTIONS_ENABLED || '1', // milikmu Giscus Apakah akan mengaktifkan emotikon artikel '1' menyalakan "0" Nonaktif Default aktif
+  COMMENT_GISCUS_EMIT_METADATA: process.env.NEXT_PUBLIC_COMMENT_GISCUS_EMIT_METADATA || '0', // milikmu Giscus Apakah akan mengekstrak Metadata '1' menyalakan '0' Mati Default tidak aktif
+  COMMENT_GISCUS_INPUT_POSITION: process.env.NEXT_PUBLIC_COMMENT_GISCUS_INPUT_POSITION || 'bottom', // Giscus milikmu Tinggalkan lokasi pesan 'bottom' ekor 'top' atas, bawaan 'bottom'
+  COMMENT_GISCUS_LANG: process.env.NEXT_PUBLIC_COMMENT_GISCUS_LANG || 'zh-CN', // Giscus milikmu bahasa e.g 'en', 'zh-TW', 'zh-CN', default 'en'
+  COMMENT_GISCUS_LOADING: process.env.NEXT_PUBLIC_COMMENT_GISCUS_LOADING || 'lazy', // Giscus milikmu Apakah akan memuat secara progresif, default 'lazy'
+  COMMENT_GISCUS_CROSSORIGIN: process.env.NEXT_PUBLIC_COMMENT_GISCUS_CROSSORIGIN || 'anonymous', // Giscus milikmu Bisa lintas domain, default 'anonymous'
 
-  // 自定义配置notion数据库字段名
+  // Konfigurasi khusus Nama bidang basis data Notion
   NOTION_PROPERTY_NAME: {
     password: process.env.NEXT_PUBLIC_NOTION_PROPERTY_PASSWORD || 'password',
-    type: process.env.NEXT_PUBLIC_NOTION_PROPERTY_TYPE || 'type', // 文章类型，
-    type_post: process.env.NEXT_PUBLIC_NOTION_PROPERTY_TYPE_POST || 'Post', // 当type文章类型与此值相同时，为博文。
-    type_page: process.env.NEXT_PUBLIC_NOTION_PROPERTY_TYPE_PAGE || 'Page', // 当type文章类型与此值相同时，为单页。
-    type_notice: process.env.NEXT_PUBLIC_NOTION_PROPERTY_TYPE_NOTICE || 'Notice', // 当type文章类型与此值相同时，为公告。
-    title: process.env.NEXT_PUBLIC_NOTION_PROPERTY_TITLE || 'title', // 文章标题
+    type: process.env.NEXT_PUBLIC_NOTION_PROPERTY_TYPE || 'type', // jenis artikel,
+    type_post: process.env.NEXT_PUBLIC_NOTION_PROPERTY_TYPE_POST || 'Post', // jika tipe tipe artikel sama dengan nilai ini, maka itu adalah postingan blog., untuk postingan blog.
+    type_page: process.env.NEXT_PUBLIC_NOTION_PROPERTY_TYPE_PAGE || 'Page', // Bila jenis artikel sama dengan nilai ini, untuk satu halaman.
+    type_notice: process.env.NEXT_PUBLIC_NOTION_PROPERTY_TYPE_NOTICE || 'Notice', // Ketika tipe artikel sama dengan nilai ini, itu adalah pengumuman.
+    title: process.env.NEXT_PUBLIC_NOTION_PROPERTY_TITLE || 'title', // Judul artikel
     status: process.env.NEXT_PUBLIC_NOTION_PROPERTY_STATUS || 'status',
-    status_publish: process.env.NEXT_PUBLIC_NOTION_PROPERTY_STATUS_PUBLISH || 'Published', // 当status状态值与此相同时为发布，可以为中文
-    status_invisible: process.env.NEXT_PUBLIC_NOTION_PROPERTY_STATUS_INVISIBLE || 'Invisible', // 当status状态值与此相同时为隐藏发布，可以为中文 ， 除此之外其他页面状态不会显示在博客上
+    status_publish: process.env.NEXT_PUBLIC_NOTION_PROPERTY_STATUS_PUBLISH || 'Published', // Ketika nilai statusnya sama dengan ini, maka dilepaska
+    status_invisible: process.env.NEXT_PUBLIC_NOTION_PROPERTY_STATUS_INVISIBLE || 'Invisible', // Ketika nilai statusnya sama dengan ini, itu adalah rilis tersembunyi, yang bisa berbahasa Mandarin Selain itu, status halaman lain tidak akan ditampilkan di blog
     summary: process.env.NEXT_PUBLIC_NOTION_PROPERTY_SUMMARY || 'summary',
     slug: process.env.NEXT_PUBLIC_NOTION_PROPERTY_SLUG || 'slug',
     category: process.env.NEXT_PUBLIC_NOTION_PROPERTY_CATEGORY || 'category',
@@ -91,17 +91,17 @@ const BLOG = {
     icon: process.env.NEXT_PUBLIC_NOTION_PROPERTY_ICON || 'icon'
   },
 
-  // 作废配置
-  AVATAR: '/avatar.png', // 作者头像，被notion中的ICON覆盖。若无ICON则取public目录下的avatar.png
-  TITLE: process.env.NEXT_PUBLIC_TITLE || 'Mst Blog', // 站点标题 ，被notion中的页面标题覆盖
-  HOME_BANNER_IMAGE: './bg_image.jpg', // 首页背景大图, 会被notion中的封面图覆盖，若无封面图则会使用代码中的 /public/bg_image.jpg 文件
-  DESCRIPTION: process.env.NEXT_PUBLIC_DESCRIPTION || 'MstBlog', // 站点描述，被notion中的页面描述覆盖
-  // 开发相关
+  // Konfigurasi usang
+  AVATAR: '/avatar.png', // Avatar penulis ditutupi oleh ICON di pemberitahuan. Jika tidak ada ikon, ambil /public/avatar.png
+  TITLE: process.env.NEXT_PUBLIC_TITLE || 'Mst Blog', // Judul, ditimpa dengan judul halaman dalam pemberitahuan
+  HOME_BANNER_IMAGE: './bg_image.jpg', // Gambar latar belakang halaman beranda, Akan ditimpa oleh gambar sampul di pemberitahuan. Jika tidak ada gambar sampul, file /public/bg_image.jpg dalam kode akan digunakan.
+  DESCRIPTION: process.env.NEXT_PUBLIC_DESCRIPTION || 'MstBlog', // Deskripsi situs, diganti dengan deskripsi halaman dalam pemberitahuan
+  // Building
   NOTION_ACCESS_TOKEN: process.env.NOTION_ACCESS_TOKEN || '', // Useful if you prefer not to make your database public
-  DEBUG: process.env.NEXT_PUBLIC_DEBUG || false, // 是否显示调试按钮
-  ENABLE_CACHE: process.env.ENABLE_CACHE || false, // 开启缓存会将Notion数据缓存在内存中，通常在开发调试中使用，正式部署开启此功能意义不大。
-  isProd: process.env.VERCEL_ENV === 'production', // distinguish between development and production environment (ref: https://vercel.com/docs/environment-variables#system-environment-variables)  isProd: process.env.VERCEL_ENV === 'production' // distinguish between development and production environment (ref: https://vercel.com/docs/environment-variables#system-environment-variables)
-  VERSION: process.env.NEXT_PUBLIC_VERSION // 版本号
+  DEBUG: process.env.NEXT_PUBLIC_DEBUG || false, // Apakah akan menampilkan tombol debug
+  ENABLE_CACHE: process.env.ENABLE_CACHE || false, // Mengaktifkan caching akan menyimpan data Notion dalam memori. Biasanya digunakan selama pengembangan dan debugging.
+  isProd: process.env.VERCEL_ENV === 'production', // membedakan antara lingkungan pengembangan dan produksi (ref: https://vercel.com/docs/environment-variables#system-environment-variables)  isProd: process.env.VERCEL_ENV === 'production' // membedakan antara lingkungan pengembangan dan produksi (ref: https://vercel.com/docs/environment-variables#system-environment-variables)
+  VERSION: process.env.NEXT_PUBLIC_VERSION // nomor versi
 }
 
 module.exports = BLOG

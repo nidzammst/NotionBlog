@@ -25,14 +25,14 @@ export async function getStaticProps() {
     slug: '',
     type: 'website'
   }
-  // 处理分页
+  // Tangani penomoran halaman
   if (BLOG.POST_LIST_STYLE === 'scroll') {
-    // 滚动列表默认给前端返回所有数据
+    // Daftar gulir mengembalikan semua data ke ujung depan secara default
   } else if (BLOG.POST_LIST_STYLE === 'page') {
     props.posts = props.posts?.slice(0, BLOG.POSTS_PER_PAGE)
   }
 
-  // 预览文章内容
+  // Pratinjau konten artikel
   if (BLOG.POST_LIST_PREVIEW === 'true') {
     for (const i in props.posts) {
       const post = props.posts[i]
@@ -43,7 +43,7 @@ export async function getStaticProps() {
     }
   }
 
-  // 异步生成Feed订阅
+  // Menghasilkan langganan feed secara asinkron
   generateRss(props?.latestPosts || [])
 
   return {

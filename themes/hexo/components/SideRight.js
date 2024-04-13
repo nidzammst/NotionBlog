@@ -12,7 +12,7 @@ import { useGlobal } from '@/lib/global'
 
 const HexoRecentComments = dynamic(() => import('./HexoRecentComments'))
 /**
- * Hexo主题右侧栏
+ * kolom kanan tema hexo
  * @param {*} props
  * @returns
  */

@@ -1,3 +1,4 @@
+
 import { NotionRenderer } from 'react-notion-x'
 import dynamic from 'next/dynamic'
 import mediumZoom from '@fisch0920/medium-zoom'
@@ -10,7 +11,7 @@ import { mapImgUrl } from '@/lib/notion/mapImage'
 
 const Equation = dynamic(() =>
   import('@/components/Equation').then(async (m) => {
-    // 化学方程式
+    // persamaan/equation kimia
     await import('@/lib/mhchem')
     return m.Equation
   })
@@ -58,7 +59,7 @@ const NotionPage = ({ post, className }) => {
 
     setTimeout(() => {
       if (isBrowser()) {
-        // 将相册gallery下的图片加入放大功能
+        // Tambahkan fungsi zoom ke gambar di galeri
         const imgList = document.querySelectorAll('.notion-collection-card-cover img')
         if (imgList && zoomRef.current) {
           for (let i = 0; i < imgList.length; i++) {
@@ -66,7 +67,7 @@ const NotionPage = ({ post, className }) => {
           }
         }
 
-        // 相册图片点击不跳转
+        // Gambar album tidak melompat saat diklik
         const cards = document.getElementsByClassName('notion-collection-card')
         for (const e of cards) {
           e.removeAttribute('href')
@@ -98,7 +99,7 @@ const NotionPage = ({ post, className }) => {
 }
 
 /**
- * 将id映射成博文内部链接。
+ * Petakan id ke tautan internal posting blog.
  * @param {*} id
  * @returns
  */
