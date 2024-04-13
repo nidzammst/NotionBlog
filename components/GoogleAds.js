@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 
-const GoogleAds = (props) => {
+const GoogleAds = ({ dataAdSlot, dataAdFormat, dataFullWidthResponsive }) => {
   useEffect(() => {
     try {
       (window.adsbygoogle = window.adsbygoogle || []).push({})
@@ -11,13 +11,15 @@ const GoogleAds = (props) => {
 
   return (
     <ins
-      className="adsbygoogle -customize"
+      className="adsbygoogle"
       style={{
         display: 'block',
         overflow: 'hidden'
       }}
       data-ad-client={process.env.NEXT_PUBLIC_GOOGLE_ADS_CLIENT_ID}
-      {...props}
+      data-ad-slot={dataAdSlot}
+      data-ad-format={dataAdFormat}
+      data-full-width-responsive={dataFullWidthResponsive.toString()}
     />
   )
 }
