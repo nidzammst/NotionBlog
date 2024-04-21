@@ -3,16 +3,16 @@
 一个使用 NextJS + Notion API 实现的，部署在 Vercel 上的静态博客系统。为Notion和所有创作者设计。
 
 
-## 预览效果
+## Efek pratinjau
 
 
-## 我要如何开始？
+## Bagaimana cara memulainya?
 
 只需几分钟即可搭建您的个人站点，欢迎移步[我的博客](https://tangly1024.com/article/notion-next) 查看教程 
 
 
-## 致谢
-感谢Craig Hart发起的Nobelium项目
+## Ucapan Terima Kasih
+Terima kasih Craig Proyek Nobelium diprakarsai oleh Hart
 <table><tr align="left">
   <td align="center"><a href="https://github.com/craigary" title="Craig Hart"><img src="https://avatars.githubusercontent.com/u/10571717" width="64px;"alt="Craig Hart"/></a><br/><a href="https://github.com/craigary" title="Craig Hart">Craig Hart</a></td>
 </tr></table>
