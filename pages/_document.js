@@ -21,6 +21,7 @@ class MyDocument extends Document {
             src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5532061638278565'
           crossOrigin="anonymous"
         />
+        <meta name="google-site-verification" content="xtxQ4BivrvG0Zu1kxTrKzx7pABt7fxPSVix3uJKVjl8" />
         </Head>
 
         <body className={`${BLOG.FONT_STYLE} tracking-wider bg-day dark:bg-night`}>
