@@ -11,7 +11,7 @@ const BLOG = {
 
   AUTHOR: 'mstblog',
   BIO: '',
-  LINK: 'https://mstblog.vercel.app/',
+  LINK: 'https://mstblog.vercel.app',
   KEYWORDS: 'Musthafa Family Blog',
   CONTACT_EMAIL: 'nidzam0501@gmail.com',
   CONTACT_GITHUB: 'https://github.com/nidzammst',
