@@ -62,5 +62,13 @@ module.exports = withBundleAnalyzer({
     //   })
     // }
     return config
+  },
+  async rewrites() {
+    return [
+      {
+        source: '/robots.txt',
+        destination: '/api/robots'
+      }
+    ]
   }
 })
