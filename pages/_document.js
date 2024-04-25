@@ -16,12 +16,6 @@ class MyDocument extends Document {
         <Head>
           <link rel='icon' href='/favicon.ico' />
           <CommonScript />
-          <Script
-          async
-            src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5532061638278565'
-          crossOrigin="anonymous"
-        />
-        <meta name="google-site-verification" content="JPjH3p9BMSCeUlaY_WKljnkhGyhfdEAuhCS51H4PP84" />
         </Head>
 
         <body className={`${BLOG.FONT_STYLE} tracking-wider bg-day dark:bg-night`}>
